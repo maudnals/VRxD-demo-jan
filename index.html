@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, VRxD Berlin! • A-Frame</title>
+    <meta name="description" content="Hello, VRxD Berlin! • A-Frame">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="meetup-1" src="/res/meetup-1.jpg">
+            <img id="meetup-2" src="/res/meetup-2.jpg">
+            <img id="meetup-4" src="/res/meetup-4.jpg">
+            <video id="meetup-1-video" autoplay loop="true" src="/res/meetup-2-video.mp4">
+                <video id="meetup-2-video" autoplay loop="true" src="/res/meetup-2-video.mp4">
+                    <video id="meetup-4-video" autoplay loop="true" src="/res/meetup-4-video.mp4">
+        </a-assets>
+        <!-- Using the asset management system. -->
+        <a-entity id="group1">
+            <a-image id="thumb-1" src="#meetup-1" position="-2.8 0.7 -2.8" width="1.8" height="1.4" rotation="0 45 0" a-cursor></a-image>
+            <a-video src="#meetup-1-video" width="4.8" height="2.6" position="-2.8 2.8 -2.8" rotation="0 45 0" opacity="0" visible="false">
+                <a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
+                <a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
+            </a-video>
+        </a-entity>
+        <a-entity id="group2">
+            <a-image id="thumb-2" src="#meetup-2" position="0 0.7 -4" width="1.8" height="1.4" a-cursor></a-image>
+            <a-video src="#meetup-1-video" width="4.8" height="2.6" position="0 2.8 -4" opacity="0" visible="false">
+                <a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
+                <a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
+            </a-video>
+        </a-entity>
+        <a-entity id="group4">
+            <a-image id="thumb-4" src="#meetup-4" position="2.8 0.7 -2.8" width="1.8" height="1.4" rotation="0 -45 0" a-cursor></a-image>
+            <a-video src="#meetup-1-video" width="4.8" height="2.6" position="2.8 2.8 -2.8" rotation="0 -45 0" opacity="0" visible="false">
+                <a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
+                <a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
+            </a-video>
+        </a-entity>
+        <!--<a-video src="#meetup-2-video" width="16" height="9" position="0 2.5 -4" opacity="0"></a-video>
+        <a-video src="#meetup-4-video" width="16" height="9" position="2.8 2.5 -2.8" rotation="0 -45 0" opacity="0"></a-video>
+ -->
+        <a-sky src="/res/background.jpg"></a-sky>
+        <a-entity position="0 0 0">
+            <a-camera>
+                <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -3" geometry="primitive: ring; radius-inner:0.04; radius-outer:0.06;" material="color: deeppink; shader: flat">
+                    <a-animation begin="cursor-fusing" easing="ease-in-cubic" attribute="scale" fill="forwards" from="1 1 1" to="0.4 0.4 0.4" dur="400"></a-animation>
+                    <a-animation begin="click" easing="ease-out-expo" attribute="scale" fill="forwards" from="0.4 0.4 0.4" to="1 1 1" dur="100"></a-animation>
+                </a-entity>
+            </a-camera>
+        </a-entity>
+    </a-scene>
+    <script src="script.js"></script>
+</body>
+
+</html>
