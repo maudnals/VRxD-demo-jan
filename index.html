@@ -41,10 +41,15 @@
             </a-video>
         </a-entity>
 
+<a-plane id="go-button" color="white" height="1" width="2" position="0 0 -2" a-cursor></a-plane>
+<!--         <a-entity position="0 0 -1">
+            <button>Coucou</button>
+        </a-entity> -->
+
         <a-sky src="res/background.jpg"></a-sky>
         <a-entity position="0 0 0">
             <a-camera>
-                <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -3" geometry="primitive: ring; radius-inner:0.04; radius-outer:0.06;" material="color: deeppink; shader: flat">
+                <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -2" geometry="primitive: ring; radius-inner:0.04; radius-outer:0.06;" material="color: deeppink; shader: flat">
                     <a-animation begin="cursor-fusing" easing="ease-in-cubic" attribute="scale" fill="forwards" from="1 1 1" to="0.4 0.4 0.4" dur="400"></a-animation>
                     <a-animation begin="click" easing="ease-out-expo" attribute="scale" fill="forwards" from="0.4 0.4 0.4" to="1 1 1" dur="100"></a-animation>
                 </a-entity>
