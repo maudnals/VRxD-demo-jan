@@ -8,17 +8,22 @@ groups.forEach(function(g) {
 
     if (thumb) {
 
-        thumb.addEventListener('click', function(event) {
+        thumb.addEventListener('click', function(e) {
             video.setAttribute('visible', 'true');
             video.emit('show');
             video.play();
         });
 
-        thumb.addEventListener('mouseleave', function(event) {
+        thumb.addEventListener('mouseleave', function(e) {
             video.emit('hide');
             video.setAttribute('visible', 'false');
             video.pause();
         });
     }
 
+    document.querySelector('.a-enter-vr-button').addEventListener('click', function(e){
+        video.play();
+    });
 });
+
+
