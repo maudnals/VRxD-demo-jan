@@ -14,9 +14,9 @@
             <img id="meetup-1" src="res/meetup-1.jpg">
             <img id="meetup-2" src="res/meetup-2.jpg">
             <img id="meetup-4" src="res/meetup-4.jpg">
-            <video id="meetup-1-video" autoplay="false" loop="true" src="res/meetup-2-video.mp4" muted>
+            <video id="meetup-1-video" autoplay="false" loop="true" src="res/meetup-1-video.mp4" muted>
             <video id="meetup-2-video" autoplay="false" loop="true" src="res/meetup-2-video.mp4" muted webkit-playsinline>
-            <video id="meetup-4-video" autoplay="false" loop="true" src="res/meetup-2-video.mp4" muted>
+            <video id="meetup-4-video" autoplay="false" loop="true" src="res/meetup-4-video.mp4" muted>
         </a-assets>
         <!-- Using the asset management system. -->
         <a-entity id="group1">
@@ -28,23 +28,18 @@
         </a-entity>
         <a-entity id="group2">
             <a-image id="thumb-2" src="#meetup-2" position="0 0.7 -4" width="1.8" height="1.4" a-cursor></a-image>
-            <a-video src="#meetup-1-video" width="4.8" height="2.2" position="0 2.55 -4" opacity="0" visible="false">
+            <a-video src="#meetup-2-video" width="4.8" height="2.2" position="0 2.55 -4" opacity="0" visible="false">
                 <a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
                 <a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
             </a-video>
         </a-entity>
         <a-entity id="group4">
             <a-image id="thumb-4" src="#meetup-4" position="2.8 0.7 -2.8" width="1.8" height="1.4" rotation="0 -45 0" a-cursor></a-image>
-            <a-video src="#meetup-1-video" width="4.8" height="2.2" position="2.8 2.55 -2.8" rotation="0 -45 0" opacity="0" visible="false">
+            <a-video src="#meetup-4-video" width="4.8" height="2.2" position="2.8 2.55 -2.8" rotation="0 -45 0" opacity="0" visible="false">
                 <a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
                 <a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
             </a-video>
         </a-entity>
-
-<a-plane id="go-button" color="white" height="1" width="2" position="0 0 -2" a-cursor></a-plane>
-<!--         <a-entity position="0 0 -1">
-            <button>Coucou</button>
-        </a-entity> -->
 
         <a-sky src="res/background.jpg"></a-sky>
         <a-entity position="0 0 0">
