@@ -6,14 +6,19 @@ groups.forEach(function(g) {
     let thumb = document.querySelector(`${groupId} a-image`);
     let video = document.querySelector(`${groupId} a-video`);
 
-    thumb.addEventListener('click', function(event) {
-        video.setAttribute('visible', 'true');
-        video.emit('show');
-        video.play();
-    });
+    if (thumb) {
 
-    thumb.addEventListener('mouseleave', function(event) {
-        video.emit('hide');
-        video.setAttribute('visible', 'false');
-    });
+        thumb.addEventListener('click', function(event) {
+            video.setAttribute('visible', 'true');
+            video.emit('show');
+            video.play();
+        });
+
+        thumb.addEventListener('mouseleave', function(event) {
+            video.emit('hide');
+            video.setAttribute('visible', 'false');
+            video.pause();
+        });
+    }
+
 });
