@@ -1,0 +1,39 @@
+snippets.html
+
+// #0 About testing
+
+// #1 Add the cursor
+// + explain click vs. mouseleave
+
+<a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -3" geometry="primitive: ring; radius-inner:0.04; radius-outer:0.06;" material="color: deeppink; shader: flat">
+    <a-animation begin="cursor-fusing" easing="ease-in-cubic" attribute="scale" fill="forwards" from="1 1 1" to="0.4 0.4 0.4" dur="400"></a-animation>
+    <a-animation begin="click" easing="ease-out-expo" attribute="scale" fill="forwards" from="0.4 0.4 0.4" to="1 1 1" dur="100"></a-animation>
+</a-entity>
+
+// #2 Implement the animation on the videos
+
+// Video:
+opacity="0" visible="false"
+// Animation:
+<a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
+<a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
+// Script
+
+
+// #3 Add more content
+
+<a-entity id="group1">
+    <a-image id="thumb-1" src="#meetup-1" position="-2.8 0.7 -2.8" width="1.8" height="1.4" rotation="0 45 0" a-cursor></a-image>
+    <a-video src="#meetup-1-video" width="4.8" height="2.6" position="-2.8 2.8 -2.8" rotation="0 45 0" opacity="0" visible="false">
+        <a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
+        <a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
+    </a-video>
+</a-entity>
+
+<a-entity id="group4">
+    <a-image id="thumb-4" src="#meetup-4" position="2.8 0.7 -2.8" width="1.8" height="1.4" rotation="0 -45 0" a-cursor></a-image>
+    <a-video src="#meetup-1-video" width="4.8" height="2.6" position="2.8 2.8 -2.8" rotation="0 -45 0" opacity="0" visible="false">
+        <a-animation begin="show" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="0" to="1" dur="400"></a-animation>
+        <a-animation begin="hide" easing="ease-in-cubic" attribute="opacity" fill="forwards" from="1" to="0" dur="400"></a-animation>
+    </a-video>
+</a-entity>
